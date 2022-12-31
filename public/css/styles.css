@@ -11,6 +11,11 @@ body {
 a {
   color: var(--bs-dark);
 }
+.navbar-top{
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
 
 /* Category Card */
 .category__link {
