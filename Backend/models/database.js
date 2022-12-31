@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+require("./Category")
 mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
