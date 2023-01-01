@@ -41,6 +41,20 @@ exports.exploreCategories = async (req, res, next) => {
 
 // get recipe with id
 
+exports.exploreRecipe = async (req, res) => {
+  try {
+    
+       let recipeId = req.params.id;
+
+       const recipe = await Recipe.findById(recipeId)
+    res.render("recipe", {
+      title: "Cooking blog - Recipe", recipe
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message || "error occured" });
+  }
+};
+
 //  async function insertDymmyCategoryData(){
 //    try {
 //      await Category.insertMany([
